@@ -11,5 +11,9 @@ This project implements an end-to-end machine learning pipeline to predict real 
 - `data/` - Raw and cleaned datasets
 - `flask_app/` - Web application
 
+## Note about Model File
+The trained model file (best_real_estate_model.pkl) is not included due to size constraints. 
+Run the notebooks to regenerate the model.
+
 ## Author
 Valentin Koychev - Technical University of Sofia - 2025
