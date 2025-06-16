@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sofia Real Estate Price Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h2 class="mb-4">Sofia Real Estate Price Prediction</h2>
+    <form id="predict-form" action="/predict" method="POST">
+      <div class="row mb-3">
+        <div class="col">
+          <label>Location</label>
+          <select class="form-select" name="location" required>
+            <option value="" disabled selected>Select location</option>
+            <option>7-ми 11-ти километър</option>
+            <option>Банишора</option>
+            <option>Белите брези</option>
+            <option>Борово</option>
+            <option>Ботунец</option>
+            <option>Бояна</option>
+            <option>Бъкстон</option>
+            <option>в.з.Американски колеж</option>
+            <option>в.з.Киноцентъра</option>
+            <option>в.з.Малинова долина</option>
+            <option>Витоша</option>
+            <option>Враждебна</option>
+            <option>Връбница</option>
+            <option>Гевгелийски</option>
+            <option>Гео Милев</option>
+            <option>Горна Баня</option>
+            <option>Горубляне</option>
+            <option>Гоце Делчев</option>
+            <option>Дианабад</option>
+            <option>Драгалевци</option>
+            <option>Дружба 1</option>
+            <option>Дружба 2</option>
+            <option>Дървеница</option>
+            <option>Западен Парк</option>
+            <option>Захарна Фабрика</option>
+            <option>Зона Б18</option>
+            <option>Зона Б19</option>
+            <option>Зона Б5</option>
+            <option>Иван Вазов</option>
+            <option>Изгрев</option>
+            <option>Изток</option>
+            <option>Илинден</option>
+            <option>Карпузица</option>
+            <option>Княжево</option>
+            <option>Красна поляна</option>
+            <option>Красно Село</option>
+            <option>Кръстова Вада</option>
+            <option>Лагера</option>
+            <option>Левски В</option>
+            <option>Левски Г</option>
+            <option>Лозенец</option>
+            <option>Люлин 1</option>
+            <option>Люлин 2</option>
+            <option>Люлин 3</option>
+            <option>Люлин 4</option>
+            <option>Люлин 5</option>
+            <option>Люлин 6</option>
+            <option>Люлин 7</option>
+            <option>Люлин 8</option>
+            <option>Люлин 9</option>
+            <option>Люлин 10</option>
+            <option>Люлин Център</option>
+            <option>м. Гърдова глава</option>
+            <option>Малинова Долина</option>
+            <option>Манастирски Ливади</option>
+            <option>Медицинска академия</option>
+            <option>Младост 1</option>
+            <option>Младост 1а</option>
+            <option>Младост 2</option>
+            <option>Младост 3</option>
+            <option>Младост 4</option>
+            <option>Модерно Предградие</option>
+            <option>Мусагеница</option>
+            <option>Надежда 1</option>
+            <option>Надежда 2</option>
+            <option>Надежда 3</option>
+            <option>Надежда 4</option>
+            <option>Обеля</option>
+            <option>Обеля 1</option>
+            <option>Обеля 2</option>
+            <option>Оборище</option>
+            <option>Овча Купел</option>
+            <option>Овча Купел 1</option>
+            <option>Овча Купел 2</option>
+            <option>Орландовци</option>
+            <option>Павлово</option>
+            <option>Подуяне</option>
+            <option>Полигона</option>
+            <option>Разсадника</option>
+            <option>Редута</option>
+            <option>Света Троица</option>
+            <option>Свобода</option>
+            <option>Сердика</option>
+            <option>Симеоново</option>
+            <option>Слатина</option>
+            <option>Стрелбище</option>
+            <option>Студентски Град</option>
+            <option>Сухата река</option>
+            <option>Суходол</option>
+            <option>Толстой</option>
+            <option>Триъгълника</option>
+            <option>Фондови Жилища</option>
+            <option>Хаджи Димитър</option>
+            <option>Хиподрума</option>
+            <option>Хладилника</option>
+            <option>Център</option>
+            <option>Яворов</option>
+        </select>
+        </div>
+        <div class="col">
+          <label>Property Type</label>
+          <select class="form-select" name="property_type" required>\
+              <option value="" disabled selected>Select property type</option>
+              <option>Едностаен</option>
+              <option>Двустаен</option>
+              <option>Тристаен</option>
+              <option>Многостаен</option>
+              <option>Мезонет</option>
+              <option>Ателие/Студио</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label>Area</label>
+          <input type="number" class="form-control" name="square_meters" required>
+        </div>
+        <div class="col">
+          <label>Construction Type</label>
+          <select class="form-select" name="construction_type" required>
+              <option value="" disabled selected>Select construction type</option>
+              <option>Тухла</option>
+              <option>Панел</option>
+              <option>ЕПК/ПК</option>
+              <option>Гредоред</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label>Construction Year</label>
+          <input type="number" class="form-control" name="construction_year" required>
+        </div>
+        <div class="col">
+          <label>Floor Number</label>
+          <input type="number" class="form-control" name="floor_number" required>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label>Floor Type</label>
+          <select class="form-select" name="floor_type" required>
+              <option value="" disabled selected>Select floor type</option>
+              <option>Непоследен</option>
+              <option>Първи жилищен</option>
+              <option>Партер</option>
+              <option>Последен етаж</option>
+              <option>Сутерен</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Predict Price</button>
+    </form>
+
+    <div id="result" class="mt-4 alert alert-info d-none"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('predict-form');
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch("/predict", { method: "POST", body: formData })
+          .then(res => res.json())
+          .then(data => {
+            const resultDiv = document.getElementById("result");
+            resultDiv.classList.remove("d-none");
+            if (data.predicted_price) {
+              resultDiv.classList.replace("alert-danger", "alert-info");
+              resultDiv.textContent = `Predicted Price: ${data.predicted_price} €`;
+            } else {
+              resultDiv.classList.replace("alert-info", "alert-danger");
+              resultDiv.textContent = `Error: ${data.error}`;
+            }
+          })
+          .catch(err => {
+            const resultDiv = document.getElementById("result");
+            resultDiv.classList.remove("d-none");
+            resultDiv.classList.replace("alert-info", "alert-danger");
+            resultDiv.textContent = `Error: ${err.message}`;
+          });
+      });
+    });
+  </script>
+</body>
+</html>
